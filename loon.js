@@ -413,4 +413,4 @@ window.addEventListener("resize", function () {
 setTimeout(function () {
   // Redirect to the second HTML file after 10 seconds (adjust timing if needed)
   window.location.href = "loon.html";
-}, 5000);
+}, 7000);
