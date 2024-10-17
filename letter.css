@@ -1,0 +1,260 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #3f3737;
+}
+
+.birthdayCard {
+  position: relative;
+  width: 250px;
+  height: 350px;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transform: perspective(2500px);
+  transition: 1s;
+}
+
+.birthdayCard:hover {
+  transform: perspective(2500px) rotate(5deg);
+  box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0.2),
+    0 10px 100px rgba(0, 0, 0, 0.5);
+}
+
+.birthdayCard:hover .cardFront {
+  transform: rotateY(-160deg);
+}
+
+.birthdayCard:hover .happy {
+  visibility: hidden;
+}
+
+.cardFront {
+  position: relative;
+  background-color: hwb(0 100% 0%);
+  width: 310px;
+  height: 470px;
+  overflow: hidden;
+  transform-origin: left;
+  box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0.2),
+    30px 0 50px rgba(0, 0, 0, 0.4);
+  transition: 0.6s;
+}
+
+.happy {
+  font-family: Tahoma, sans-serif;
+  text-align: center;
+  margin: 30px;
+  background-image: linear-gradient(120deg, #ffd856 0%, #f98c6e 100%);
+  transition: 0.1s;
+}
+
+.balloons {
+  position: absolute;
+}
+
+.balloon-1,
+.balloon-2,
+.balloon-3,
+.balloon-4 {
+  position: absolute;
+  width: 85px;
+  height: 95px;
+  border-radius: 50%;
+}
+
+.balloon-1 {
+  background-color: rgba(255, 40, 90, 0.7);
+  left: -10px;
+  top: 50px;
+}
+
+.balloon-2 {
+  background-color: rgba(9, 215, 160, 0.7);
+  left: 50px;
+  top: 20px;
+}
+
+.balloon-3 {
+  background-color: rgba(255, 186, 26, 0.7);
+  left: 110px;
+  top: 50px;
+}
+
+.balloon-4 {
+  background-color: rgba(12, 122, 159, 0.7);
+  left: 170px;
+  top: 50px;
+}
+
+.balloon-1::before,
+.balloon-2::before,
+.balloon-3::before,
+.balloon-4::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 155px;
+  background-color: #ffc848;
+  top: 95px;
+  left: 43px;
+}
+
+.balloon-1::after,
+.balloon-2::after,
+.balloon-3::after,
+.balloon-4::after {
+  content: "";
+  position: absolute;
+  border-right: 7px solid transparent;
+  border-left: 7px solid transparent;
+  top: 94px;
+  left: 37px;
+}
+
+.balloon-1::after {
+  border-bottom: 10px solid #ff3e6b;
+}
+
+.balloon-2::after {
+  border-bottom: 10px solid #04b183;
+}
+
+.balloon-3::after {
+  border-bottom: 10px solid #ffc94c;
+}
+
+.balloon-4::after {
+  border-bottom: 10px solid #13a9bd;
+}
+
+.cardInside {
+  position: absolute;
+  background-color: #fff;
+  width: 310px;
+  height: 470px;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0.2);
+}
+
+p {
+  font-family: "Happy kiddy", cursive;
+  font-size: 10px;
+  margin: 13.5px;
+  color: #333;
+}
+
+.name {
+  position: absolute;
+  left: 150px;
+  top: 200px;
+  color: #333;
+}
+
+.back {
+  font-family: Tahoma, sans-serif;
+  color: #333;
+  text-align: center;
+  margin: 30px;
+  outline-color: #333;
+  outline-style: dotted;
+}
+
+/* Styles for small images */
+/* Styles for photo 1 */
+.photo-1 {
+  width: 100px;
+  height: auto;
+  position: absolute;
+  top: 20px; /* Specific position for the first photo */
+  left: 20px;
+  z-index: 10; /* Ensure it appears above other content */
+}
+
+/* Styles for photo 2 */
+.photo-2 {
+  width: 120px; /* Different size for the second photo */
+  height: auto;
+  position: absolute;
+  bottom: 275px; /* Different position for the second photo */
+  right: 30px;
+  z-index: 10;
+}
+
+.photo-3 {
+  width: 190px;
+  height: auto;
+  position: absolute;
+  top: 200px; /* Specific position for the first photo */
+  left: 200px;
+  z-index: 10; /* Ensure it appears above other content */
+}
+
+.photo-4 {
+  width: 120px; /* Different size for the second photo */
+  height: auto;
+  position: absolute;
+  bottom: 600px; /* Different position for the second photo */
+  right: 130px;
+  z-index: 10;
+}
+
+.photo-5 {
+  width: 190px;
+  height: auto;
+  position: absolute;
+  top: 660px; /* Specific position for the first photo */
+  left: 600px;
+  z-index: 10; /* Ensure it appears above other content */
+}
+
+.photo-6 {
+  width: 120px; /* Different size for the second photo */
+  height: auto;
+  position: absolute;
+  bottom: 550px; /* Different position for the second photo */
+  right: 600px;
+  z-index: 10;
+}
+
+.photo-7 {
+  width: 190px;
+  height: auto;
+  position: absolute;
+  top: 530px; /* Specific position for the first photo */
+  left: 100px;
+  z-index: 10; /* Ensure it appears above other content */
+}
+
+.photo-8 {
+  width: 120px; /* Different size for the second photo */
+  height: auto;
+  position: absolute;
+  bottom: 70px; /* Different position for the second photo */
+  right: 317px;
+  left: 300;
+  z-index: 10;
+}
+
+.photo-9 {
+  width: 120px; /* Different size for the second photo */
+  height: auto;
+  position: absolute;
+  bottom: 400px; /* Different position for the second photo */
+  right: 300px;
+  left: 200;
+  z-index: 10;
+}
+
+.photo-10 {
+  width: 120px; /* Different size for the second photo */
+  height: auto;
+  position: absolute;
+  bottom: -20px; /* Different position for the second photo */
+  right: 80px;
+  left: 300;
+  z-index: 10;
+}

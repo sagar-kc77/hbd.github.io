@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Birthday Countdown</title>
+    <link rel="stylesheet" href="candle.css" />
+    <style>
+      body {
+        background-color: #1e1934;
+        font-family: "Sacramento", cursive;
+        color: white;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Countdown Timer -->
+    <div id="countdown">
+      <h1 id="timer">Puntuuuu</h1>
+    </div>
+
+    <!-- Cake and Candle Section (Initially hidden) -->
+    <div id="cake-section" style="display: none">
+      <h1>
+        Make a wish.. <br />
+        .. and blow out the candle
+      </h1>
+      <div id="glow" class="glow"></div>
+      <div id="candle">
+        <!-- Stripes on candle -->
+        <div class="stripe"></div>
+        <div class="stripe"></div>
+        <div class="stripe"></div>
+        <div class="stripe"></div>
+        <div class="stripe"></div>
+        <div id="top">
+          <div class="smoke"></div>
+          <div class="smoke"></div>
+          <div class="smoke"></div>
+          <div id="knot"></div>
+          <div id="flame" class="burn"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="candle.js"></script>
+  </body>
+</html>
